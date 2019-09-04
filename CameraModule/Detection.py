@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from core.ThreadJob import DoThreadJob,DoQThreadJob
 
 class EdgeDetection:
     def __init__(self):
@@ -61,7 +60,6 @@ class EdgeDetection:
         blurred_frame = self.BlurredFrame(self.image.copy())
         hsvimg = self.ConvertHSV(blurred_frame)
         cv2.imshow("HSV",hsvimg)
-        cv2.resizeWindow("HSV",800,600)
         cv2.waitKey(1)
         if cv2.getWindowProperty("HSV",cv2.WND_PROP_VISIBLE) <1:
             cv2.destroyWindow("HSV")

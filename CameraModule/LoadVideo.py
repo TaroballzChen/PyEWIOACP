@@ -11,7 +11,7 @@ class VideoLive:
             self.videocap = cv2.VideoCapture(self.SourceFilePath.text())
             self.VideoTimer = QTimer(self)
             self.VideoTimer.timeout.connect(partial(VideoLive.UpdateFrame,self))
-            self.VideoTimer.start(5)
+            self.VideoTimer.start(20)
         else:
             VideoLive.StopCamera(self)
         
