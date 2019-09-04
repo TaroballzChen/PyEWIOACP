@@ -9,6 +9,8 @@ from CameraModule.LoadVideo import VideoLive
 from CameraModule.ImageTools import SnapShot,ImageCrop,VideoSpliter,PixelCoordinate
 from CameraModule.Detection import EdgeDetection
 
+import numpy as np
+
 class CameraUiOperation(BaslerLive,WebcamLive,VideoLive,SnapShot,ImageCrop,VideoSpliter,PixelCoordinate,EdgeDetection):
     def __init__(self):
         super(CameraUiOperation,self).__init__()
@@ -27,6 +29,7 @@ class CameraUiOperation(BaslerLive,WebcamLive,VideoLive,SnapShot,ImageCrop,Video
         self.ShowFindCoordinateTargetImagebtn.clicked.connect(self.ShowTargetImage)
 
     def StartCamera(self):
+        self.preStartCameraAction()
         self.SwitchWebcamStatus(self.CameraLiveButtonEnabledFlag)
         if self.ChooseBaslercamSource.isChecked():
             BaslerLive.StartCamera(self)
@@ -34,6 +37,13 @@ class CameraUiOperation(BaslerLive,WebcamLive,VideoLive,SnapShot,ImageCrop,Video
             WebcamLive.StartCamera(self)
         elif self.ChooseFileSource.isChecked():
             VideoLive.StartCamera(self)
+        
+        # plotGraph
+        self.IntegrationPlot()
+
+    def preStartCameraAction(self):
+        if self.CameraLiveButtonEnabledFlag == False:
+            self.DetectArea = np.ndarray([])
 
     def SwitchWebcamStatus(self,status):
         if not status:
@@ -81,12 +91,12 @@ class CameraUiOperation(BaslerLive,WebcamLive,VideoLive,SnapShot,ImageCrop,Video
     def UIshowMask(self):
         self.MaskTimer =QTimer(self)
         self.MaskTimer.timeout.connect(self.showMask)
-        self.MaskTimer.start()
+        self.MaskTimer.start(5)
     
     def UIshowHSV(self):
         self.HSVTimer = QTimer(self)
         self.HSVTimer.timeout.connect(self.showHSV)
-        self.HSVTimer.start()
+        self.HSVTimer.start(5)
 
 
     def imgtoQImage(self,img):

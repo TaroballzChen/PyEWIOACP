@@ -29,3 +29,7 @@ python main.py
 # Reference
 
 * <https://github.com/curtis992250/Arduino-Control-Interface-for-Electro-Wetting>
+
+# Update
+
+* 2019.9.5 Add module which plotting contours area against frame 

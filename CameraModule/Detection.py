@@ -1,5 +1,7 @@
 import cv2
 import numpy as np
+from core.ThreadJob import DoThreadJob
+from functools import partial
 
 class EdgeDetection:
     def __init__(self):
@@ -34,7 +36,6 @@ class EdgeDetection:
     
     
     def getContoursArea(self,contours):
-        self.DetectArea = np.ndarray([])
         if not contours:
             self.DetectArea = np.append(self.DetectArea,0)
             return
@@ -73,4 +74,5 @@ class EdgeDetection:
         upper = np.array([self.EdgeDetectUpperB.value(),self.EdgeDetectUpperG.value(),self.EdgeDetectUpperR.value()])
         mask = self.CreateMask(hsvimg,lower,upper)
         contours = self.ObjectContours(mask)
-        self.ImageDrawContours(img,contours)
+        DoThreadJob(partial(self.ImageDrawContours,img,contours))
+        DoThreadJob(partial(self.getContoursArea,contours))

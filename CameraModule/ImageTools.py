@@ -1,5 +1,5 @@
 import cv2
-import time
+import datetime
 from functools import partial
 from PyQt5.QtCore import QTimer
 
@@ -10,8 +10,9 @@ class SnapShot:
         pass
     
     def snapshot(self):
+        time = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
         try:
-            cv2.imwrite(ShotSavePath+"%s.jpg"%time.time(),self.image.copy())
+            cv2.imwrite(ShotSavePath+"%s.jpg"%time,self.image.copy())
         except Exception:
             pass
 

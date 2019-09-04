@@ -4,7 +4,11 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import matplotlib.pyplot as plt
 
-class PlotWindowUiOperation():
+from PyQt5.QtCore import QTimer
+from functools import partial
+
+from pltModule.pltTimeGraph import pltContoursVsTime
+class PlotWindowUiOperation(pltContoursVsTime):
     def __init__(self):
         super(PlotWindowUiOperation,self).__init__()
 
@@ -18,6 +22,17 @@ class PlotWindowUiOperation():
     def PlotWindowUiActionInitialize(self):
         self.PlotWindowInitialize()
 
-    def plotAction(self):
-        pass
+    def IntegrationPlot(self):
+        self.Dopltgraph(pltContoursVsTime.plotgraph)
+
+    def prepltAction(self):
+        self.figure.clear()
+        ax = self.figure.add_subplot(111)
+        ax.clear()
+        return ax
+
+    def Dopltgraph(self,pltfunc):
+        pltTimer = QTimer(self)
+        pltTimer.timeout.connect(partial(pltfunc,self,pltTimer))
+        pltTimer.start(1000)
     
