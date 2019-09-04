@@ -11,13 +11,13 @@ class WebcamLive:
             self.videocap = cv2.VideoCapture(self.WebCamDeviceID.value())
             self.WebCamTimer = QTimer(self)
             self.WebCamTimer.timeout.connect(partial(WebcamLive.UpdateFrame,self))
-            self.WebCamTimer.start(5)
+            self.WebCamTimer.start(35)
         else:
             WebcamLive.StopCamera(self)
         
     def StopCamera(self):
-        self.WebCamTimer.stop()
         self.videocap.release()
+        self.WebCamTimer.stop()
 
     def UpdateFrame(self):
         ret , image = self.videocap.read()
