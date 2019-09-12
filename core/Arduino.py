@@ -20,7 +20,8 @@ class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
         # Path Control
         self.SixteenOfOne.clicked.connect(partial(DoThreadJob,self.SeriesLight))
         self.OneOfOne.clicked.connect(partial(DoThreadJob,self.DFPMix))
-
+        self.OneOfThree.clicked.connect(partial(DoThreadJob,self.QFPMix))
+        
     def GetPort(self):
         ArduinoConnect.GetPort(self)
         self.PortComboBox.clear()

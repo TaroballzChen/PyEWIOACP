@@ -17,3 +17,7 @@ class SendCommand:
     def DFPMix(self):
         command = "n"
         self.SerialWrite(command)
+    
+    def QFPMix(self):
+        command = "m"
+        self.SerialWrite(command)
