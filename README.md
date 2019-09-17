@@ -33,3 +33,4 @@ python main.py
 # Update
 
 * 2019.9.5 Add module which plotting contours area against frame 
+* 2019.9.10 Add image gray level transform function
