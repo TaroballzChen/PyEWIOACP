@@ -34,7 +34,7 @@
      <bool>false</bool>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="sorting_tab">
      <attribute name="title">
@@ -486,9 +486,9 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="TwoOfOne">
          <property name="text">
-          <string>PushButton</string>
+          <string>QFP X Mix</string>
          </property>
         </widget>
        </item>
@@ -1555,7 +1555,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
   <tabstop>pushButton_56</tabstop>
   <tabstop>pushButton_4</tabstop>
   <tabstop>pushButton_57</tabstop>
-  <tabstop>pushButton_7</tabstop>
+  <tabstop>TwoOfOne</tabstop>
   <tabstop>OneOfFour</tabstop>
   <tabstop>pushButton_63</tabstop>
   <tabstop>pushButton_8</tabstop>

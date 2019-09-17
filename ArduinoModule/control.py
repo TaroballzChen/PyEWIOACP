@@ -21,3 +21,7 @@ class SendCommand:
     def QFPMix(self):
         command = "m"
         self.SerialWrite(command)
+    
+    def QFPXMix(self):
+        command = "x"
+        self.SerialWrite(command)

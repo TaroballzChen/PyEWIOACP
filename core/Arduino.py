@@ -21,7 +21,8 @@ class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
         self.SixteenOfOne.clicked.connect(partial(DoThreadJob,self.SeriesLight))
         self.OneOfOne.clicked.connect(partial(DoThreadJob,self.DFPMix))
         self.OneOfThree.clicked.connect(partial(DoThreadJob,self.QFPMix))
-        
+        self.TwoOfOne.clicked.connect(partial(DoThreadJob,self.QFPXMix))
+
     def GetPort(self):
         ArduinoConnect.GetPort(self)
         self.PortComboBox.clear()
