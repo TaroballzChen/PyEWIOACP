@@ -1,19 +1,8 @@
 void channel_select(String str){
   switch (str[0]){
-    case 'a':
-      pin_operate(a,arrayLength(a));
-      break;
     
     case 'b':
       pin_operate(b,arrayLength(b));
-      break;
-
-    case 'c':
-      pin_operate(c,arrayLength(c));
-      break;
-      
-    case 'd':
-      pin_operate(d,arrayLength(d));
       break;
       
     case 'x':

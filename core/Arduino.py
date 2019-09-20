@@ -22,6 +22,14 @@ class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
         self.OneOfOne.clicked.connect(partial(DoThreadJob,self.DFPMix))
         self.OneOfThree.clicked.connect(partial(DoThreadJob,self.QFPMix))
         self.TwoOfOne.clicked.connect(partial(DoThreadJob,self.QFPXMix))
+        
+        # Magnetic beads with NAEB Experiment Path Control
+        self.SixOfOne.clicked.connect(partial(DoThreadJob,self.MagbeadsSampleGo))
+        self.SixOfTwo.clicked.connect(partial(DoThreadJob,self.XMix))
+        self.SixOfThree.clicked.connect(partial(DoThreadJob,self.NAEBGo))
+        self.SixOfFour.clicked.connect(partial(DoThreadJob,self.NAEBGo2))
+        self.SevenOfOne.clicked.connect(partial(DoThreadJob,self.WasteClean))
+        self.SevenOfTwo.clicked.connect(partial(DoThreadJob,self.WasteClean2))
 
     def GetPort(self):
         ArduinoConnect.GetPort(self)

@@ -34,7 +34,7 @@
      <bool>false</bool>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="sorting_tab">
      <attribute name="title">
@@ -130,13 +130,16 @@
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>320</width>
+        <width>322</width>
         <height>671</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="11" column="3">
         <widget class="QPushButton" name="pushButton_35">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -144,6 +147,9 @@
        </item>
        <item row="15" column="1">
         <widget class="QPushButton" name="pushButton_66">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -151,6 +157,9 @@
        </item>
        <item row="13" column="2">
         <widget class="QPushButton" name="pushButton_60">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -158,6 +167,9 @@
        </item>
        <item row="14" column="3">
         <widget class="QPushButton" name="pushButton_59">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -172,6 +184,9 @@
        </item>
        <item row="13" column="3">
         <widget class="QPushButton" name="pushButton_55">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -179,6 +194,9 @@
        </item>
        <item row="11" column="0">
         <widget class="QPushButton" name="pushButton_44">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -186,6 +204,9 @@
        </item>
        <item row="9" column="3">
         <widget class="QPushButton" name="pushButton_45">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -193,6 +214,9 @@
        </item>
        <item row="4" column="1">
         <widget class="QPushButton" name="pushButton_19">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -200,20 +224,26 @@
        </item>
        <item row="3" column="3">
         <widget class="QPushButton" name="pushButton_26">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
         </widget>
        </item>
        <item row="6" column="0">
-        <widget class="QPushButton" name="pushButton_31">
+        <widget class="QPushButton" name="SevenOfOne">
          <property name="text">
-          <string>PushButton</string>
+          <string>Waste Clean</string>
          </property>
         </widget>
        </item>
        <item row="11" column="1">
         <widget class="QPushButton" name="pushButton_40">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -221,20 +251,26 @@
        </item>
        <item row="4" column="0">
         <widget class="QPushButton" name="pushButton_15">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QPushButton" name="pushButton_18">
+        <widget class="QPushButton" name="SixOfOne">
          <property name="text">
-          <string>PushButton</string>
+          <string>Mb S Go</string>
          </property>
         </widget>
        </item>
        <item row="7" column="2">
         <widget class="QPushButton" name="pushButton_29">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -242,20 +278,26 @@
        </item>
        <item row="6" column="2">
         <widget class="QPushButton" name="pushButton_36">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QPushButton" name="pushButton_22">
+        <widget class="QPushButton" name="SixOfTwo">
          <property name="text">
-          <string>PushButton</string>
+          <string>X Mix</string>
          </property>
         </widget>
        </item>
        <item row="7" column="3">
         <widget class="QPushButton" name="pushButton_28">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -263,20 +305,29 @@
        </item>
        <item row="9" column="0">
         <widget class="QPushButton" name="pushButton_50">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
         </widget>
        </item>
        <item row="5" column="3">
-        <widget class="QPushButton" name="pushButton_20">
+        <widget class="QPushButton" name="SixOfFour">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>NAEB Go 2</string>
          </property>
         </widget>
        </item>
        <item row="9" column="2">
         <widget class="QPushButton" name="pushButton_39">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -284,6 +335,9 @@
        </item>
        <item row="4" column="2">
         <widget class="QPushButton" name="pushButton_21">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -291,6 +345,9 @@
        </item>
        <item row="8" column="3">
         <widget class="QPushButton" name="pushButton_37">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -298,6 +355,9 @@
        </item>
        <item row="6" column="3">
         <widget class="QPushButton" name="pushButton_46">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -305,6 +365,9 @@
        </item>
        <item row="10" column="1">
         <widget class="QPushButton" name="pushButton_49">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -312,6 +375,9 @@
        </item>
        <item row="9" column="1">
         <widget class="QPushButton" name="pushButton_41">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -319,6 +385,9 @@
        </item>
        <item row="4" column="3">
         <widget class="QPushButton" name="pushButton_17">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -326,6 +395,9 @@
        </item>
        <item row="7" column="0">
         <widget class="QPushButton" name="pushButton_33">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -333,20 +405,26 @@
        </item>
        <item row="8" column="2">
         <widget class="QPushButton" name="pushButton_32">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QPushButton" name="pushButton_34">
+        <widget class="QPushButton" name="SevenOfTwo">
          <property name="text">
-          <string>PushButton</string>
+          <string>Waste Clean 2</string>
          </property>
         </widget>
        </item>
        <item row="7" column="1">
         <widget class="QPushButton" name="pushButton_27">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -354,6 +432,9 @@
        </item>
        <item row="8" column="0">
         <widget class="QPushButton" name="pushButton_47">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -361,6 +442,9 @@
        </item>
        <item row="8" column="1">
         <widget class="QPushButton" name="pushButton_43">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -368,6 +452,9 @@
        </item>
        <item row="10" column="0">
         <widget class="QPushButton" name="pushButton_30">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -375,20 +462,26 @@
        </item>
        <item row="10" column="3">
         <widget class="QPushButton" name="pushButton_38">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
         </widget>
        </item>
        <item row="5" column="2">
-        <widget class="QPushButton" name="pushButton_24">
+        <widget class="QPushButton" name="SixOfThree">
          <property name="text">
-          <string>PushButton</string>
+          <string>NAEB Go</string>
          </property>
         </widget>
        </item>
        <item row="3" column="2">
         <widget class="QPushButton" name="pushButton_16">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -396,6 +489,9 @@
        </item>
        <item row="10" column="2">
         <widget class="QPushButton" name="pushButton_48">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -403,6 +499,9 @@
        </item>
        <item row="15" column="2">
         <widget class="QPushButton" name="pushButton_58">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -410,6 +509,9 @@
        </item>
        <item row="15" column="3">
         <widget class="QPushButton" name="pushButton_54">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -417,6 +519,9 @@
        </item>
        <item row="12" column="2">
         <widget class="QPushButton" name="pushButton_52">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -424,6 +529,9 @@
        </item>
        <item row="12" column="0">
         <widget class="QPushButton" name="pushButton_64">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -431,6 +539,9 @@
        </item>
        <item row="12" column="1">
         <widget class="QPushButton" name="pushButton_62">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -438,6 +549,9 @@
        </item>
        <item row="13" column="0">
         <widget class="QPushButton" name="pushButton_51">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -445,6 +559,9 @@
        </item>
        <item row="12" column="3">
         <widget class="QPushButton" name="pushButton_65">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -452,6 +569,9 @@
        </item>
        <item row="14" column="1">
         <widget class="QPushButton" name="pushButton_61">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -459,6 +579,9 @@
        </item>
        <item row="11" column="2">
         <widget class="QPushButton" name="pushButton_42">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -466,6 +589,9 @@
        </item>
        <item row="14" column="0">
         <widget class="QPushButton" name="pushButton_56">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -473,6 +599,9 @@
        </item>
        <item row="1" column="1">
         <widget class="QPushButton" name="pushButton_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -480,6 +609,9 @@
        </item>
        <item row="13" column="1">
         <widget class="QPushButton" name="pushButton_57">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -501,6 +633,9 @@
        </item>
        <item row="14" column="2">
         <widget class="QPushButton" name="pushButton_63">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -508,6 +643,9 @@
        </item>
        <item row="2" column="0">
         <widget class="QPushButton" name="pushButton_8">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -515,6 +653,9 @@
        </item>
        <item row="2" column="3">
         <widget class="QPushButton" name="pushButton_14">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -522,6 +663,9 @@
        </item>
        <item row="1" column="2">
         <widget class="QPushButton" name="pushButton_11">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -529,6 +673,9 @@
        </item>
        <item row="2" column="2">
         <widget class="QPushButton" name="pushButton_12">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -536,6 +683,9 @@
        </item>
        <item row="1" column="3">
         <widget class="QPushButton" name="pushButton_13">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -550,6 +700,9 @@
        </item>
        <item row="3" column="1">
         <widget class="QPushButton" name="pushButton_23">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -557,6 +710,9 @@
        </item>
        <item row="2" column="1">
         <widget class="QPushButton" name="pushButton_3">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -571,6 +727,9 @@
        </item>
        <item row="3" column="0">
         <widget class="QPushButton" name="pushButton_25">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>PushButton</string>
          </property>
@@ -1515,16 +1674,16 @@ font: 75 10pt &quot;Courier&quot;;</string>
   <tabstop>pushButton_45</tabstop>
   <tabstop>pushButton_19</tabstop>
   <tabstop>pushButton_26</tabstop>
-  <tabstop>pushButton_31</tabstop>
+  <tabstop>SevenOfOne</tabstop>
   <tabstop>pushButton_40</tabstop>
   <tabstop>pushButton_15</tabstop>
-  <tabstop>pushButton_18</tabstop>
+  <tabstop>SixOfOne</tabstop>
   <tabstop>pushButton_29</tabstop>
   <tabstop>pushButton_36</tabstop>
-  <tabstop>pushButton_22</tabstop>
+  <tabstop>SixOfTwo</tabstop>
   <tabstop>pushButton_28</tabstop>
   <tabstop>pushButton_50</tabstop>
-  <tabstop>pushButton_20</tabstop>
+  <tabstop>SixOfFour</tabstop>
   <tabstop>pushButton_39</tabstop>
   <tabstop>pushButton_21</tabstop>
   <tabstop>pushButton_37</tabstop>
@@ -1534,13 +1693,13 @@ font: 75 10pt &quot;Courier&quot;;</string>
   <tabstop>pushButton_17</tabstop>
   <tabstop>pushButton_33</tabstop>
   <tabstop>pushButton_32</tabstop>
-  <tabstop>pushButton_34</tabstop>
+  <tabstop>SevenOfTwo</tabstop>
   <tabstop>pushButton_27</tabstop>
   <tabstop>pushButton_47</tabstop>
   <tabstop>pushButton_43</tabstop>
   <tabstop>pushButton_30</tabstop>
   <tabstop>pushButton_38</tabstop>
-  <tabstop>pushButton_24</tabstop>
+  <tabstop>SixOfThree</tabstop>
   <tabstop>pushButton_16</tabstop>
   <tabstop>pushButton_48</tabstop>
   <tabstop>pushButton_58</tabstop>
