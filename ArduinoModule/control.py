@@ -51,4 +51,7 @@ class SendCommand:
     def NAEBGo2(self):
         command = "l"
         self.SerialWrite(command)
-        
+    
+    def GoAndMix(self):
+        command = "a"
+        self.SerialWrite(command)

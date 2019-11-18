@@ -250,12 +250,12 @@
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QPushButton" name="pushButton_15">
+        <widget class="QPushButton" name="FiveOfOne">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>GoAndMix</string>
          </property>
         </widget>
        </item>
@@ -1676,7 +1676,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
   <tabstop>pushButton_26</tabstop>
   <tabstop>SevenOfOne</tabstop>
   <tabstop>pushButton_40</tabstop>
-  <tabstop>pushButton_15</tabstop>
+  <tabstop>FiveOfOne</tabstop>
   <tabstop>SixOfOne</tabstop>
   <tabstop>pushButton_29</tabstop>
   <tabstop>pushButton_36</tabstop>

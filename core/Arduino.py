@@ -31,6 +31,9 @@ class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
         self.SevenOfOne.clicked.connect(partial(DoThreadJob,self.WasteClean))
         self.SevenOfTwo.clicked.connect(partial(DoThreadJob,self.WasteClean2))
 
+        # Chemical Mix
+        self.FiveOfOne.clicked.connect(partial(DoThreadJob,self.GoAndMix))
+
     def GetPort(self):
         ArduinoConnect.GetPort(self)
         self.PortComboBox.clear()
