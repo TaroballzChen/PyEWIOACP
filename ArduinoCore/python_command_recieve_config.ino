@@ -44,11 +44,20 @@ void channel_select(String str){
     case 'a':
       pin_operate(a,arrayLength(a));
       break;
-
     
     case '@':
       pin_operate(Pause,arrayLength(Pause));
       break;
+
+    // switch Magenetic 
+    case '*':
+      Switch_ElectroMagnetic();
+      break;
+
+    case '=':
+      Switch_ServoMagnetic();
+      break;
+
     
     default:
       command="";

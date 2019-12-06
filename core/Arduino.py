@@ -34,6 +34,9 @@ class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
         # Chemical Mix
         self.FiveOfOne.clicked.connect(partial(DoThreadJob,self.GoAndMix))
 
+        # Servo Magnet
+        self.NineOfOne.clicked.connect(partial(DoThreadJob,self.ServoMag))
+
     def GetPort(self):
         ArduinoConnect.GetPort(self)
         self.PortComboBox.clear()

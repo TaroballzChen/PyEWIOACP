@@ -55,3 +55,7 @@ class SendCommand:
     def GoAndMix(self):
         command = "a"
         self.SerialWrite(command)
+
+    def ServoMag(self):
+        command = "="
+        self.SerialWrite(command)

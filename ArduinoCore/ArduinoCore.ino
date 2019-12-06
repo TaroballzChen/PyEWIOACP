@@ -1,8 +1,10 @@
 #include <avr/pgmspace.h>
+#include <Servo.h>
 
 #define CH595 48
 #define arrayLength(arr) (sizeof((arr))/sizeof((arr)[0]))
 
+Servo myservo;
 String command = "";
 const int latch = 5;
 const int clock_pin = 6;
@@ -10,10 +12,24 @@ const int data_pin = 7;
 const int output[] = {latch,clock_pin,data_pin};
 int len = arrayLength(output);
 
+//ElectroMagnetic Module
+const int electroMagpin = 10;
+const int servoMagpin = 9;
+bool IsMagEnable = false;
+bool IsServoMagEnable = false;
+
 void setup() {
   Serial.begin(9600);
   Serial.println("Ready");
   pinmode_init(output);
+  electroMagModule_init();
+  myservo.attach(9);
+}
+
+void electroMagModule_init(){
+  pinMode(electroMagpin,OUTPUT);  
+  digitalWrite(electroMagpin,LOW);
+  IsMagEnable = false;
 }
 
 void pinmode_init(const int pinList[]){
