@@ -24,15 +24,19 @@ class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
         self.TwoOfOne.clicked.connect(partial(DoThreadJob,self.QFPXMix))
         
         # Magnetic beads with NAEB Experiment Path Control
-        self.SixOfOne.clicked.connect(partial(DoThreadJob,self.MagbeadsSampleGo))
-        self.SixOfTwo.clicked.connect(partial(DoThreadJob,self.XMix))
-        self.SixOfThree.clicked.connect(partial(DoThreadJob,self.NAEBGo))
-        self.SixOfFour.clicked.connect(partial(DoThreadJob,self.NAEBGo2))
-        self.SevenOfOne.clicked.connect(partial(DoThreadJob,self.WasteClean))
-        self.SevenOfTwo.clicked.connect(partial(DoThreadJob,self.WasteClean2))
+        self.FiveOfThree.clicked.connect(partial(DoThreadJob,self.LeftIN))
+        self.FiveOfFour.clicked.connect(partial(DoThreadJob,self.RightIN))
+        self.EightOfOne.clicked.connect(partial(DoThreadJob,self.ToLeftOut))
+        self.EightOfTwo.clicked.connect(partial(DoThreadJob,self.ToRightOut))
+        self.SixOfOne.clicked.connect(partial(DoThreadJob,self.LeftRightIN))
+        self.SixOfTwo.clicked.connect(partial(DoThreadJob,self.Mix))
+        self.SixOfThree.clicked.connect(partial(DoThreadJob,self.TopIN))
+        self.SixOfFour.clicked.connect(partial(DoThreadJob,self.BottomIN))
+        self.SevenOfOne.clicked.connect(partial(DoThreadJob,self.ToTopOut))
+        self.SevenOfTwo.clicked.connect(partial(DoThreadJob,self.ToBottomOut))
 
         # Chemical Mix
-        self.FiveOfOne.clicked.connect(partial(DoThreadJob,self.GoAndMix))
+        self.FiveOfOne.clicked.connect(partial(DoThreadJob,self.LRinAndMix))
 
         # Servo Magnet
         self.NineOfOne.clicked.connect(partial(DoThreadJob,self.ServoMag))

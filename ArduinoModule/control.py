@@ -27,32 +27,48 @@ class SendCommand:
         self.SerialWrite(command)
 
     # Magnetic bead with NAEB Experiment
+
+    def LeftIN(self):
+        command = "c"
+        self.SerialWrite(command)
+
+    def RightIN(self):
+        command = "d"
+        self.SerialWrite(command)
     
-    def MagbeadsSampleGo(self):
+    def ToLeftOut(self):
+        command = "e"
+        self.SerialWrite(command)
+
+    def ToRightOut(self):
+        command = "f"
+        self.SerialWrite(command)
+
+    def LeftRightIN(self):
         command = "g"
         self.SerialWrite(command)
 
-    def XMix(self):
+    def Mix(self):
         command = "h"
         self.SerialWrite(command)
 
-    def WasteClean(self):
+    def ToTopOut(self):
         command = "i"
         self.SerialWrite(command)
 
-    def WasteClean2(self):
+    def ToBottomOut(self):
         command = "j"
         self.SerialWrite(command)
         
-    def NAEBGo(self):
+    def TopIN(self):
         command = "k"
         self.SerialWrite(command)
 
-    def NAEBGo2(self):
+    def BottomIN(self):
         command = "l"
         self.SerialWrite(command)
     
-    def GoAndMix(self):
+    def LRinAndMix(self):
         command = "a"
         self.SerialWrite(command)
 

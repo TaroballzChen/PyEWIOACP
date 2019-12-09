@@ -130,7 +130,7 @@
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>322</width>
+        <width>325</width>
         <height>671</height>
        </rect>
       </property>
@@ -235,7 +235,7 @@
        <item row="6" column="0">
         <widget class="QPushButton" name="SevenOfOne">
          <property name="text">
-          <string>Waste Clean</string>
+          <string>To Top Out</string>
          </property>
         </widget>
        </item>
@@ -255,14 +255,14 @@
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>GoAndMix</string>
+          <string>LRin and Mix</string>
          </property>
         </widget>
        </item>
        <item row="5" column="0">
         <widget class="QPushButton" name="SixOfOne">
          <property name="text">
-          <string>Mb S Go</string>
+          <string>Left Right in</string>
          </property>
         </widget>
        </item>
@@ -319,7 +319,7 @@
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>NAEB Go 2</string>
+          <string>Bottom in</string>
          </property>
         </widget>
        </item>
@@ -334,12 +334,12 @@
         </widget>
        </item>
        <item row="4" column="2">
-        <widget class="QPushButton" name="pushButton_21">
+        <widget class="QPushButton" name="FiveOfThree">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>Left in</string>
          </property>
         </widget>
        </item>
@@ -384,22 +384,22 @@
         </widget>
        </item>
        <item row="4" column="3">
-        <widget class="QPushButton" name="pushButton_17">
+        <widget class="QPushButton" name="FiveOfFour">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>Right in</string>
          </property>
         </widget>
        </item>
        <item row="7" column="0">
-        <widget class="QPushButton" name="pushButton_33">
+        <widget class="QPushButton" name="EightOfOne">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>To Left Out</string>
          </property>
         </widget>
        </item>
@@ -416,17 +416,17 @@
        <item row="6" column="1">
         <widget class="QPushButton" name="SevenOfTwo">
          <property name="text">
-          <string>Waste Clean 2</string>
+          <string>to Bott. Out</string>
          </property>
         </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QPushButton" name="pushButton_27">
+        <widget class="QPushButton" name="EightOfTwo">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>To Right Out</string>
          </property>
         </widget>
        </item>
@@ -473,7 +473,7 @@
        <item row="5" column="2">
         <widget class="QPushButton" name="SixOfThree">
          <property name="text">
-          <string>NAEB Go</string>
+          <string>Top in</string>
          </property>
         </widget>
        </item>
@@ -1685,16 +1685,16 @@ font: 75 10pt &quot;Courier&quot;;</string>
   <tabstop>pushButton_50</tabstop>
   <tabstop>SixOfFour</tabstop>
   <tabstop>pushButton_39</tabstop>
-  <tabstop>pushButton_21</tabstop>
+  <tabstop>FiveOfThree</tabstop>
   <tabstop>pushButton_37</tabstop>
   <tabstop>pushButton_46</tabstop>
   <tabstop>pushButton_49</tabstop>
   <tabstop>pushButton_41</tabstop>
-  <tabstop>pushButton_17</tabstop>
-  <tabstop>pushButton_33</tabstop>
+  <tabstop>FiveOfFour</tabstop>
+  <tabstop>EightOfOne</tabstop>
   <tabstop>pushButton_32</tabstop>
   <tabstop>SevenOfTwo</tabstop>
-  <tabstop>pushButton_27</tabstop>
+  <tabstop>EightOfTwo</tabstop>
   <tabstop>NineOfOne</tabstop>
   <tabstop>pushButton_43</tabstop>
   <tabstop>pushButton_30</tabstop>

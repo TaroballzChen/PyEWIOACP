@@ -16,6 +16,22 @@ void channel_select(String str){
     case 'n':
       pin_operate(n,arrayLength(n));
       break;
+      
+    case 'c':
+      pin_operate(c,arrayLength(c));
+      break;
+
+    case 'd':
+      pin_operate(d,arrayLength(d));
+      break;
+    
+    case 'e':
+      pin_operate(e,arrayLength(e));
+      break;
+
+    case 'f':
+      pin_operate(f,arrayLength(f));
+      break;
 
     case 'g':
       pin_operate(g,arrayLength(g));
