@@ -8,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>1229</width>
-    <height>783</height>
+    <height>791</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,7 @@
       <x>10</x>
       <y>50</y>
       <width>351</width>
-      <height>691</height>
+      <height>711</height>
      </rect>
     </property>
     <property name="mouseTracking">
@@ -1385,7 +1385,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>14</y>
+      <y>10</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -1433,7 +1433,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>700</y>
+      <y>720</y>
       <width>801</width>
       <height>37</height>
      </rect>
@@ -1502,18 +1502,11 @@ font: 75 10pt &quot;Courier&quot;;</string>
       <x>380</x>
       <y>10</y>
       <width>801</width>
-      <height>32</height>
+      <height>51</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QLabel" name="CameraSourceText">
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Camera source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item>
+    <layout class="QGridLayout" name="gridLayout_7">
+     <item row="0" column="1">
       <widget class="QRadioButton" name="ChoseWebcamSource">
        <property name="font">
         <font>
@@ -1531,27 +1524,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QSpinBox" name="WebCamDeviceID"/>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="ChooseFileSource">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>FromFile</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="SourceFilePath"/>
-     </item>
-     <item>
+     <item row="0" column="5">
       <widget class="QPushButton" name="VideoSourceFileDialog">
        <property name="maximumSize">
         <size>
@@ -1570,7 +1543,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
        </property>
       </widget>
      </item>
-     <item>
+     <item row="0" column="6">
       <widget class="QRadioButton" name="ChooseBaslercamSource">
        <property name="font">
         <font>
@@ -1584,13 +1557,68 @@ font: 75 10pt &quot;Courier&quot;;</string>
        </property>
       </widget>
      </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="CameraSourceText">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Camera source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QSpinBox" name="WebCamDeviceID"/>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLineEdit" name="SourceFilePath"/>
+     </item>
+     <item row="0" column="3">
+      <widget class="QRadioButton" name="ChooseFileSource">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>FromFile</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QRadioButton" name="ChooseIPcamSource">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>IPCam.</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" colspan="5">
+      <widget class="QLineEdit" name="IPCameraURL">
+       <property name="text">
+        <string>http://192.168.</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QTabWidget" name="tabWidget_2">
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>50</y>
+      <y>70</y>
       <width>831</width>
       <height>641</height>
      </rect>

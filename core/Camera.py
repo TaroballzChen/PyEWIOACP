@@ -5,13 +5,14 @@ from functools import partial
 
 from CameraModule.BaslerCamLive import BaslerLive
 from CameraModule.WebCamLive import WebcamLive
+from CameraModule.IPCamLive import IPcamLive
 from CameraModule.LoadVideo import VideoLive
 from CameraModule.ImageTools import SnapShot,ImageCrop,VideoSpliter,PixelCoordinate,GrayLevel
 from CameraModule.Detection import EdgeDetection
 
 import numpy as np
 
-class CameraUiOperation(BaslerLive,WebcamLive,VideoLive,SnapShot,ImageCrop,VideoSpliter,PixelCoordinate,GrayLevel,EdgeDetection):
+class CameraUiOperation(BaslerLive,WebcamLive,IPcamLive,VideoLive,SnapShot,ImageCrop,VideoSpliter,PixelCoordinate,GrayLevel,EdgeDetection):
     def __init__(self):
         super(CameraUiOperation,self).__init__()
         self.CameraLiveButtonEnabledFlag = False
@@ -37,6 +38,8 @@ class CameraUiOperation(BaslerLive,WebcamLive,VideoLive,SnapShot,ImageCrop,Video
             WebcamLive.StartCamera(self)
         elif self.ChooseFileSource.isChecked():
             VideoLive.StartCamera(self)
+        elif self.ChooseIPcamSource.isChecked():
+            IPcamLive.StartCamera(self)
         
         # plotGraph
         self.IntegrationPlot()
