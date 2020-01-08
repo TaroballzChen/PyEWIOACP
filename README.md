@@ -34,4 +34,5 @@ python main.py
 
 * 2019.9.5 Add module which plotting contours area against frame 
 * 2019.9.10 Add image gray level transform function
-* 2019.12.17 Add IPCamera Module 
+* 2019.12.17 Add IPcamera module 
+* 2020.1.9 Add automated process setup module

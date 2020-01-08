@@ -5,8 +5,9 @@ from core.ThreadJob import DoThreadJob,DoQThreadJob
 from ArduinoModule.connect import ArduinoConnect
 from ArduinoModule.control import SendCommand
 from ArduinoModule.arrayMeasure import ControlArrayMeasure
+from ArduinoModule.excuteControlProcedure import ControlProcedure
 
-class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
+class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure,ControlProcedure):
     def __init__(self):
         super(ArduinoUiOperation,self).__init__()
         ControlArrayMeasure.__init__(self)
@@ -40,6 +41,16 @@ class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
 
         # Servo Magnet
         self.NineOfOne.clicked.connect(partial(DoThreadJob,self.ServoMag))
+
+        # Control Procedurce UI Block
+        self.AddRowBtn.clicked.connect(partial(DoThreadJob,self.AddNewRow))
+        self.RemoveRowBtn.clicked.connect(partial(DoThreadJob,self.RemoveSelectedRow))
+        self.ProcessSourceFileDialog.clicked.connect(self.GetProcedureFileName)
+        self.StartProcessBtn.clicked.connect(self.StartProcess)
+        self.STOPALLBtn.clicked.connect(self.StopProcess)
+        self.LoadProcedureBtn.clicked.connect(self.LoadProcedure)
+        self.SaveProcedureBtn.clicked.connect(self.SaveProcedure)
+
 
     def GetPort(self):
         ArduinoConnect.GetPort(self)
@@ -81,5 +92,3 @@ class ArduinoUiOperation(ArduinoConnect,SendCommand,ControlArrayMeasure):
     def ArrayPannelUpdate(self,string):
         self.PopupArduinoControlArrayWindowUI.ShoWArduinoControlArray.setText(string)
         self.PopupArduinoControlArrayWindowUI.ShoWArduinoControlArray.update()
-    
-        

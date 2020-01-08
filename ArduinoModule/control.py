@@ -75,3 +75,6 @@ class SendCommand:
     def ServoMag(self):
         command = "="
         self.SerialWrite(command)
+    
+    def Null(self):
+        pass
