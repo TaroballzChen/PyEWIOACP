@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QTableWidgetItem,QMessageBox,QFileDialog
+from PyQt5.QtWidgets import QTableWidgetItem,QMessageBox,QFileDialog,QSpinBox
 from PyQt5.QtCore import QTimer
 from core.ThreadJob import DoThreadJob
 
@@ -18,23 +18,23 @@ class ControlProcedure:
     # Logic
     def StartProcess(self):
         self.ProcedureReload()
-        intervalTime = self.TimeInterval.value()
         self.ControlProcedureList.selectRow(0)
         self.ControlProcedureTimer = QTimer(self)
         self.ControlProcedureTimer.timeout.connect(self.ExcuteProcess)
-        self.ControlProcedureTimer.start(intervalTime)
+        self.ControlProcedureTimer.start()
         
     def ExcuteProcess(self):
         totalRow = self.ControlProcedureList.rowCount()
         currentRow = self.ControlProcedureList.currentRow()
         Action = self.ControlProcedureList.item(currentRow,0).text()
-        isFinish = self.ControlProcedureList.item(currentRow,1).text()
+        isFinish = self.ControlProcedureList.item(currentRow,2).text()
+        SpendTime = int(self.ControlProcedureList.item(currentRow,1).text())
         
 
         if isFinish == "" and self.IsActionExists(Action):
             f = getattr(self,Action)    
             DoThreadJob(f)   # Do something 
-            self.ControlProcedureList.setItem(currentRow,1,QTableWidgetItem("V"))
+            self.ControlProcedureList.setItem(currentRow,2,QTableWidgetItem("V"))
             if self.isProcessEnd(currentRow,totalRow):
                 self.ControlProcedureTimer.stop()
                 return
@@ -45,6 +45,7 @@ class ControlProcedure:
             return
 
         self.ControlProcedureList.selectRow(currentRow+1)
+        self.ControlProcedureTimer.setInterval(SpendTime)
         return
         
     def isProcessEnd(self,currentRow,totalRow):
@@ -63,7 +64,7 @@ class ControlProcedure:
     def ProcedureReload(self):
         totalRow = self.ControlProcedureList.rowCount()
         for row in range(totalRow):
-            self.ControlProcedureList.setItem(row,1,QTableWidgetItem(""))
+            self.ControlProcedureList.setItem(row,2,QTableWidgetItem(""))
 
     def StopProcess(self):
         self.ControlProcedureTimer.stop()
@@ -81,24 +82,32 @@ class ControlProcedure:
             return [p.strip() for p in all]
     
     def LoadProcedure(self):
-        ProcedureList = self.ReadProcedureFile()
-        self.ControlProcedureList.setRowCount(0)
-        for i in range(len(ProcedureList)):
-            self.AddNewRow()
-            self.ControlProcedureList.setItem(i,0,QTableWidgetItem(ProcedureList[i]))
+        try:
+            ProcedureList = self.ReadProcedureFile()
+            self.ControlProcedureList.setRowCount(0)
+            for i in range(len(ProcedureList)):
+                self.AddNewRow()
+                rowItem = ProcedureList[i].split("\t")
+                self.ControlProcedureList.setItem(i,0,QTableWidgetItem(rowItem[0]))
+                self.ControlProcedureList.setItem(i,1,QTableWidgetItem(rowItem[1]))
+        except FileNotFoundError:
+            QMessageBox.information(self,"File Not Found!!!","File Not Found! plese confirm",QMessageBox.Ok)
     
-    def GetControlProcedureListActionItem(self):
+    def GetControlProcedureListItem(self):
         totalRow = self.ControlProcedureList.rowCount()
         l = []
         for row in range(totalRow):
             actionText = self.ControlProcedureList.item(row,0).text()
-            l.append(actionText.strip())
+            spendTimeText = self.ControlProcedureList.item(row,1).text()
+            l.append(actionText+"\t"+spendTimeText)
         else:
             return [p+"\n" for p in l]
     
     def SaveProcedure(self):
-        ProcedureList = self.GetControlProcedureListActionItem()
+        ProcedureList = self.GetControlProcedureListItem()
         FileName = self.ProcessSourceFilePath.text()
+        if FileName == "":
+            return
         with open(FileName,'w') as file:
             file.writelines(ProcedureList)
         QMessageBox.information(self,"Save Success","Save Sucessful.",QMessageBox.Ok)

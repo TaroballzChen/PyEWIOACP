@@ -77,4 +77,5 @@ class SendCommand:
         self.SerialWrite(command)
     
     def Null(self):
-        command = ""
+        command = "Hello"
+        print(command)
