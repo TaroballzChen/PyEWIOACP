@@ -74,9 +74,21 @@ int calc_bit(char num,int i){
     }
 }
 
+void electrode_preClose() {
+  digitalWrite(latch,LOW);
+  for (int i=0;i<CH595/4;i++){
+      shiftOut(data_pin,clock_pin,MSBFIRST,0); 
+  }
+  digitalWrite(latch,HIGH);
+  delay(1000);
+}
+
+
+
 void pin_operate(const char control_array[],int array_length){
   int line = array_length/CH595;
   for(int i=0;i<line;i++){
+//    electrode_preClose();
     digitalWrite(latch,LOW);
     int z = CH595*(i+1);
     for(int j=0;j<CH595/4;j++){
@@ -86,9 +98,10 @@ void pin_operate(const char control_array[],int array_length){
             char data = pgm_read_word_near(control_array + (z+k));
             res += calc_bit(data,k);
         }
-    shiftOut(data_pin,clock_pin,MSBFIRST,res);
+        shiftOut(data_pin,clock_pin,MSBFIRST,res);
     }
     digitalWrite(latch,HIGH);
     delay(1500);
+    electrode_preClose();
   }
 }
