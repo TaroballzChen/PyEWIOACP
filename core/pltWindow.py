@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 from PyQt5.QtCore import QTimer
 from functools import partial
 
-from pltModule.pltTimeGraph import pltContoursVsTime
-class PlotWindowUiOperation(pltContoursVsTime):
+from pltModule.pltTimeGraph import pltContoursVsTime,pltFrameGrayValueSumVsTime
+class PlotWindowUiOperation(pltContoursVsTime,pltFrameGrayValueSumVsTime):
     def __init__(self):
         super(PlotWindowUiOperation,self).__init__()
 
@@ -23,7 +23,12 @@ class PlotWindowUiOperation(pltContoursVsTime):
         self.PlotWindowInitialize()
 
     def IntegrationPlot(self):
-        self.Dopltgraph(pltContoursVsTime.plotgraph)
+        if self.ContoursAreaDataPlotCheckBox.isChecked() == True:
+            self.Dopltgraph(pltContoursVsTime.plotgraph)
+        elif self.FrameGrayValueSumDataPlotCheckBox.isChecked() == True:
+            self.Dopltgraph(pltFrameGrayValueSumVsTime.plotgraph)
+        else:
+            pass
 
     def prepltAction(self):
         self.figure.clear()

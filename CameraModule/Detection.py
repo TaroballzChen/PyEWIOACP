@@ -76,3 +76,15 @@ class EdgeDetection:
         contours = self.ObjectContours(mask)
         DoThreadJob(partial(self.ImageDrawContours,img,contours))
         DoThreadJob(partial(self.getContoursArea,contours))
+
+class FrameGrayValueSumDetection:
+
+    def __init__(self):
+        pass
+    
+    def RecordFrameGrayVal(self,img):
+        self.DetectArea = np.append(self.DetectArea,img.sum())
+
+    def getFrameGrayValueProcess(self,img):
+        DoThreadJob(partial(self.RecordFrameGrayVal,img))
+        

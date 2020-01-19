@@ -1,4 +1,4 @@
-import cv2
+import cv2,datetime,numpy
 from functools import partial
 from PyQt5.QtCore import QTimer
 
@@ -14,9 +14,10 @@ class VideoLive:
             self.VideoTimer.start(20)
         else:
             VideoLive.StopCamera(self)
-        
+            
     def StopCamera(self):
         self.VideoTimer.stop()
+        self.exportPltData()
         self.videocap.release()
 
     def UpdateFrame(self):
@@ -27,4 +28,8 @@ class VideoLive:
             return
         if type(image) != None:
             self.displayImage(image,1)
-
+    
+    def exportPltData(self):
+        if self.ContoursAreaDataPlotCheckBox.isChecked() or self.FrameGrayValueSumDataPlotCheckBox.isChecked():
+            timestr = datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S.%f")
+            numpy.savetxt("./output_plt_data/%s.csv"%timestr,self.DetectArea)

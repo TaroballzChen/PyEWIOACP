@@ -8,11 +8,11 @@ from CameraModule.WebCamLive import WebcamLive
 from CameraModule.IPCamLive import IPcamLive
 from CameraModule.LoadVideo import VideoLive
 from CameraModule.ImageTools import SnapShot,ImageCrop,VideoSpliter,PixelCoordinate,GrayLevel
-from CameraModule.Detection import EdgeDetection
+from CameraModule.Detection import EdgeDetection,FrameGrayValueSumDetection
 
 import numpy as np
 
-class CameraUiOperation(BaslerLive,WebcamLive,IPcamLive,VideoLive,SnapShot,ImageCrop,VideoSpliter,PixelCoordinate,GrayLevel,EdgeDetection):
+class CameraUiOperation(BaslerLive,WebcamLive,IPcamLive,VideoLive,SnapShot,ImageCrop,VideoSpliter,PixelCoordinate,GrayLevel,EdgeDetection,FrameGrayValueSumDetection):
     def __init__(self):
         super(CameraUiOperation,self).__init__()
         self.CameraLiveButtonEnabledFlag = False
@@ -75,6 +75,9 @@ class CameraUiOperation(BaslerLive,WebcamLive,IPcamLive,VideoLive,SnapShot,Image
         
         if self.GrayLevelTransformCheckBox.isChecked():
             img = self.GrayLevelTransform(img)
+
+        if self.FrameGrayValueSumDataPlotCheckBox.isChecked():
+            self.getFrameGrayValueProcess(img)
         
         self.image = img
         self.Imagecopytodisplay = self.image.copy()
