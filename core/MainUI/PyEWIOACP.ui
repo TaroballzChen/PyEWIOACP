@@ -26,7 +26,7 @@
      <rect>
       <x>10</x>
       <y>50</y>
-      <width>351</width>
+      <width>361</width>
       <height>701</height>
      </rect>
     </property>
@@ -130,7 +130,7 @@
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>325</width>
+        <width>341</width>
         <height>671</height>
        </rect>
       </property>
@@ -754,7 +754,7 @@
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>321</width>
+        <width>331</width>
         <height>511</height>
        </rect>
       </property>
@@ -816,7 +816,7 @@
        <rect>
         <x>10</x>
         <y>560</y>
-        <width>321</width>
+        <width>331</width>
         <height>111</height>
        </rect>
       </property>
@@ -884,6 +884,30 @@
          </property>
         </widget>
        </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_26">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Estimated Time</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="ProcedureEstimatedTime">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>00:00:00</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </widget>
@@ -896,7 +920,7 @@
        <rect>
         <x>10</x>
         <y>80</y>
-        <width>321</width>
+        <width>331</width>
         <height>129</height>
        </rect>
       </property>
@@ -1208,7 +1232,7 @@
        <rect>
         <x>10</x>
         <y>220</y>
-        <width>321</width>
+        <width>331</width>
         <height>164</height>
        </rect>
       </property>
@@ -1614,7 +1638,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>351</width>
+      <width>371</width>
       <height>31</height>
      </rect>
     </property>
@@ -1643,6 +1667,12 @@ font: 75 10pt &quot;Courier&quot;;</string>
      </item>
      <item>
       <widget class="QPushButton" name="RefreshPortsButton">
+       <property name="minimumSize">
+        <size>
+         <width>110</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="text">
         <string>Refresh Ports</string>
        </property>
@@ -1662,7 +1692,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
      <rect>
       <x>380</x>
       <y>720</y>
-      <width>801</width>
+      <width>821</width>
       <height>37</height>
      </rect>
     </property>
@@ -1685,6 +1715,13 @@ font: 75 10pt &quot;Courier&quot;;</string>
       <widget class="QPushButton" name="CameraSnapshotButton">
        <property name="text">
         <string>Snapshot</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="VideoRecordButton">
+       <property name="text">
+        <string>Record</string>
        </property>
       </widget>
      </item>
@@ -1727,7 +1764,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>400</x>
       <y>10</y>
       <width>801</width>
       <height>51</height>

@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QTableWidgetItem,QMessageBox,QFileDialog,QSpinBox
 from PyQt5.QtCore import QTimer
 from core.ThreadJob import DoThreadJob
+import numpy,time
 
 class ControlProcedure:
     def __init__(self):
@@ -82,6 +83,7 @@ class ControlProcedure:
             return [p.strip() for p in all]
     
     def LoadProcedure(self):
+        timelist = numpy.ndarray([])
         try:
             ProcedureList = self.ReadProcedureFile()
             self.ControlProcedureList.setRowCount(0)
@@ -90,6 +92,12 @@ class ControlProcedure:
                 rowItem = ProcedureList[i].split("\t")
                 self.ControlProcedureList.setItem(i,0,QTableWidgetItem(rowItem[0]))
                 self.ControlProcedureList.setItem(i,1,QTableWidgetItem(rowItem[1]))
+                timelist = numpy.append(timelist,int(rowItem[1]))
+            else:
+                sec = timelist.sum() / 1000
+                convertTime = time.strftime("%H:%M:%S",time.gmtime(sec))
+                self.ProcedureEstimatedTime.setText(convertTime)
+
         except FileNotFoundError:
             QMessageBox.information(self,"File Not Found!!!","File Not Found! plese confirm",QMessageBox.Ok)
     
