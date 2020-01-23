@@ -65,15 +65,20 @@ void channel_select(String str){
       pin_operate(Pause,arrayLength(Pause));
       break;
 
-    // switch Magenetic 
-    case '*':
-      Switch_ElectroMagnetic();
-      break;
-
+   // switch Magenetic 
     case '=':
       Switch_ServoMagnetic();
       break;
 
+
+   // switch pump
+//   case '.':
+//      Switch_SyringeMotor1();
+//      break;
+//
+//   case '#':
+//      Switch_SyringeMotor2();
+//      break;
     
     default:
       command="";
