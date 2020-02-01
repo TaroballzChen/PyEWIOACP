@@ -7,19 +7,24 @@
 Servo MagnetServo;
 const int servoMagpin = 9;
 
-Servo firstValve;
-const int firstValvepin = 10;
-
-
+Servo Valve;
+const int Valvepin = 10;
 
 String command = "";
 const int latch = 5;
 const int clock_pin = 6;
 const int data_pin = 7;
 const int output[] = {latch,clock_pin,data_pin};
+
+const int FirstValve = 12;
+const int SecondValve = 13;
+const int ThirdValve = 2;
+const int FourthValve = 3;
+
+const int switchValve[] = {FirstValve,SecondValve,ThirdValve,FourthValve};
+
 int len = arrayLength(output);
-
-
+int ValveListLength = arrayLength(switchValve);
 
 void setup() {
   Serial.begin(9600);
@@ -29,16 +34,30 @@ void setup() {
   //ServoMag initialize
   MagnetServo.attach(servoMagpin);
   RotateServo(MagnetServo,170);
-
+  
   //Servo3wayValve initialize
-  firstValve.attach(firstValvepin);
-  RotateServo(firstValve,180);
+  ValvePinMode_init(switchValve);
+  Valve.attach(Valvepin);
+  ValveMotor_init(switchValve);
 }
 
 void pinmode_init(const int pinList[]){
   for(int i=0;i<len;i++){
     pinMode(pinList[i],OUTPUT);
     digitalWrite(pinList[i],LOW);
+  }
+}
+
+void ValvePinMode_init(const int pinList[]){
+  for(int i=0;i<ValveListLength;i++){
+    pinMode(pinList[i],OUTPUT);
+    digitalWrite(pinList[i],LOW);
+  }
+}
+
+void ValveMotor_init(const int SwitchValvepinList[]){
+  for (int i=0;i<ValveListLength;i++){
+    SwitchValveThenRotate(SwitchValvepinList[i], Valve, 0);
   }
 }
   

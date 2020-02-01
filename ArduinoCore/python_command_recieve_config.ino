@@ -71,14 +71,18 @@ void channel_select(String str){
       break;
 
 
-   // switch pump
-//   case '.':
-//      Switch_SyringeMotor1();
-//      break;
-//
-//   case '#':
-//      Switch_SyringeMotor2();
-//      break;
+   // Reagent Injection
+   case '1':
+      FirstReagentInject();
+      break;
+
+   case '2':
+      SecondReagentInject();
+      break;
+
+   case '3':
+      ThirdReagentInject();
+      break;
     
     default:
       command="";
