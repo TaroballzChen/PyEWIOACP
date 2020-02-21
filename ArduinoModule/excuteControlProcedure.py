@@ -26,6 +26,7 @@ class ControlProcedure:
         
     def ExcuteProcess(self):
         totalRow = self.ControlProcedureList.rowCount()
+        if totalRow == 0:  return  # bug?
         currentRow = self.ControlProcedureList.currentRow()
         Action = self.ControlProcedureList.item(currentRow,0).text()
         isFinish = self.ControlProcedureList.item(currentRow,2).text()
@@ -94,7 +95,7 @@ class ControlProcedure:
                 self.ControlProcedureList.setItem(i,1,QTableWidgetItem(rowItem[1]))
                 timelist = numpy.append(timelist,int(rowItem[1]))
             else:
-                sec = timelist.sum() / 1000
+                sec = sum(timelist) / 1000
                 convertTime = time.strftime("%H:%M:%S",time.gmtime(sec))
                 self.ProcedureEstimatedTime.setText(convertTime)
 
