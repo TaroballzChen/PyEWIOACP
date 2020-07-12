@@ -1,6 +1,6 @@
 # PyEWIOACP
 ElectroWetting Image Operate with Arduino Control Platform(PyEWIOACP) is my research tools developed by python programing during the Ph.D.
-![MainWindow](https://i.imgur.com/sQ9I8NG.png)
+![MainWindow](MainWindow.png)
 
 # Requirement
 ```text
@@ -15,7 +15,7 @@ if prefer using industrial camera of Basler as video source, please follow the s
 2. Install [**_pypylon_**](https://github.com/basler/pypylon) which the python wrapper for the Basler pylon Camera Software Suite
 
 # Architecture
-![Architecture](https://i.imgur.com/tCcktXx.png)
+![Architecture](Architecture.png)
 
 # Usage
 ```cmd
